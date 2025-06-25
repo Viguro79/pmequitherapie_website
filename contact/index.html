@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Liens utiles</title>
+    <title>Contact</title>
     <link rel="icon" href="/pmequitherapie.fr/images/favicon.ico">
     <link rel="stylesheet" href="/pmequitherapie.fr/assets/css/main.css">
     
@@ -47,18 +47,34 @@
 
         <section id="main" class="container">
         
-            <header><h2 id="undefined" tabindex="-1">Liens utiles</h2>
-<p>Retrouvez sur cette page des sites en lien avec mon activité.</p>
+            <header><h2 id="undefined" tabindex="-1">Me contacter</h2>
+<p>Pour tout renseignement supplémentaire à propos des modalités d’accompagnements en équithérapie, ou pour prendre rendez-vous, vous pouvez me contacter via le formulaire ci-dessous ou par téléphone.</p>
 </header>
-<div class="box">
-      <span class="image featured"><img src="/pmequitherapie.fr/images/lien.jpg" alt="photo de pancarte en bois portant l'inscription TAKH"></span>
-      <ul>
-<li>🔗 <a href="https://www.cheval-vie.fr">Cheval &amp; Vie</a> : le lieu où se déroulent les séances.</li>
-<li>🔗 <a href="https://aupresdesponeys.fr">Auprès des poneys</a> : le site d'Ophélie Simonet, équithérapeute avec qui je peux proposer des séances de groupes.</li>
-<li>🔗 <a href="https://ifequitherapie.fr">IFEQ</a> : Institut de Formation en Équithérapie.</li>
-<li>🔗 <a href="https://sipmediationequine.fr">SIPME</a> : Syndicat Interprofessionnel des Praticiens de la Médiation Équine.</li>
-</ul>
-<p></div></p>
+<p><a href="#" class="button fit icon solid fa-phone" id="callme">Afficher mon numéro</a></p>
+<section class="box">
+      <form method="post" action="https://formspree.io/f/mannlral">
+					<div class="row gtr-50 gtr-uniform">
+						<input type="text" name="bot-field" id="bot-field" style="display:none;">
+						<div class="col-6 col-12-mobilep">
+							<input type="text" name="name" id="name" value="" placeholder="Nom">
+						</div>
+						<div class="col-6 col-12-mobilep">
+							<input type="email" name="email" id="email" value="" placeholder="Courriel">
+						</div>
+						<div class="col-12">
+							<input type="text" name="subject" id="subject" value="" placeholder="Sujet">
+						</div>
+						<div class="col-12">
+							<textarea name="message" id="message" placeholder="Saissez votre message" rows="6"></textarea>
+						</div>
+						<div class="col-12">
+							<ul class="actions special">
+								<li><input type="submit" value="Envoyez votre message"></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+<p></section></p>
 
         
 		</section>
@@ -87,6 +103,16 @@
 	<script src="/pmequitherapie.fr/assets/js/util.js"></script>
 	<script src="/pmequitherapie.fr/assets/js/main.js"></script>
 
+
+	<script>
+	document.getElementById('callme').addEventListener('click', function(e){
+		e.preventDefault();
+		this.href = 'tel: 0663865844';
+		let rawPhone = '0663865844'.replace(/\D/g, '');
+		let formattedPhone = rawPhone.replace(/(\d{2})(?=\d)/g, '$1.').replace(/\.$/, '');
+		this.textContent = formattedPhone;
+	});
+	</script>
 
 </body>
 </html>

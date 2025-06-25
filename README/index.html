@@ -1,90 +1,34 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>My Custom Styled Page</title>
-    <link rel="stylesheet" href="/pmequitherapie_website/assets/css/main.css">
-    
-</head>
-
-<body class="">
-    <div id="page-wrapper" >
-
-        <header id="header" class="">
-  <h1>
-    <a href="/pmequitherapie_website/">
-      <img class="logo" src="/pmequitherapie_website/images/logo.png" alt="logo">
-    </a>
-    Pauline Méquin Équithérapie
-  </h1>
-  <nav id="nav">
-    <ul>
-      <li><a href="/pmequitherapie_website/">Accueil</a></li>
-      <li><a href="/pmequitherapie_website/apropos/">À propos de moi</a></li>
-      <li>
-        <a href="/pmequitherapie_website/equitherapie/" class="icon solid fa-angle-down">Équithérapie</a>
-        <ul>
-          <li><a href="/pmequitherapie_website/equitherapie/#presentation">Présentation</a></li>
-          <li><a href="/pmequitherapie_website/equitherapie/#public">Qui peut en bénéficier ?</a></li>
-          <li><a href="/pmequitherapie_website/equitherapie/#cheval">Intérêt du cheval ?</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/pmequitherapie_website/infos/" class="icon solid fa-angle-down">Informations pratiques</a>
-        <ul>
-          <li><a href="/pmequitherapie_website/infos/#tarif">Tarifs</a></li>
-          <li><a href="/pmequitherapie_website/infos/#seance">Séances</a></li>
-          <li><a href="/pmequitherapie_website/infos/#accompagnement">Accompagnement</a></li>
-        </ul>
-      </li>
-      <li><a href="/pmequitherapie_website/liens/">Liens utiles</a></li>
-      <li><a href="/pmequitherapie_website/contact/" class="button">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-        <section id="main" class="">
-        
-            <h1 id="welcome-to-my-portfolio" tabindex="-1">Welcome to My Portfolio</h1>
-<p>This is a simple page built with <strong>Eleventy</strong> and styled with my own CSS.</p>
-<h2 id="projects" tabindex="-1">Projects</h2>
+<h1 id="pmequitherapie.fr" tabindex="-1">pmequitherapie.fr</h1>
+<p>Ce dépôt contient le code source du site <a href="https://pmequitherapie.fr">pmequitherapie.fr</a>, développé avec <a href="https://www.11ty.dev/">Eleventy (11ty)</a> et géré via <a href="https://sveltia.com/">Sveltia CMS</a> (compatible Decap/Netlify CMS).</p>
+<h2 id="structure-du-projet" tabindex="-1">Structure du projet</h2>
 <ul>
-<li>Project One</li>
-<li>Project Two</li>
-<li>Project Three</li>
+<li><strong>/admin/</strong> : Interface CMS (Sveltia/Decap) et configuration</li>
+<li><strong>/images/</strong>, <strong>/assets/</strong> : Images et ressources statiques</li>
+<li><strong>/*.md</strong> : Pages du site au format Markdown (éditables via le CMS)</li>
+<li><strong>/_includes/</strong> : Templates Nunjucks</li>
+<li><strong>/.eleventy.js</strong> : Configuration Eleventy</li>
 </ul>
-<blockquote>
-<p>“Style is a way to say who you are without having to speak.” — Rachel Zoe</p>
-</blockquote>
-<p>Thanks for visiting!</p>
-
-        
-		</section>
-        <!-- Footer -->
-<footer id="footer">
-    <ul class="icons">
-        <li>
-            <a href="https://www.facebook.com/paulinemequinequitherapie" class="icon brands fa-facebook-f">
-                <span class="label">Facebook</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="copyright">
-        <li>&copy; Pauline Méquin Équithérapie.</li>
-        <li><a href="/mentions.html">Mentions légales</a></li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
-</footer>
-
-    </div>
-    	<script src="/pmequitherapie_website/assets/js/jquery.min.js"></script>
-	<script src="/pmequitherapie_website/assets/js/jquery.dropotron.min.js"></script>
-	<script src="/pmequitherapie_website/assets/js/jquery.scrollex.min.js"></script>
-	<script src="/pmequitherapie_website/assets/js/browser.min.js"></script>
-	<script src="/pmequitherapie_website/assets/js/breakpoints.min.js"></script>
-	<script src="/pmequitherapie_website/assets/js/util.js"></script>
-	<script src="/pmequitherapie_website/assets/js/main.js"></script>
-    
-</body>
-</html>
+<h2 id="environnements" tabindex="-1">Environnements</h2>
+<ul>
+<li><strong>Développement</strong> : repo <code>Viguro79/pmequitherapie</code> (branche <code>feat/workinprogress</code>)</li>
+<li><strong>Staging</strong> : build déployé sur <code>Viguro79/pmequitherapie_staging</code> (<code>gh-pages</code>)</li>
+<li><strong>Production</strong> : build déployé sur <code>Viguro79/pmequitherapie_website</code> (<code>gh-pages</code>), relié au domaine personnalisé</li>
+</ul>
+<h2 id="%C3%A9dition-du-contenu" tabindex="-1">Édition du contenu</h2>
+<p>Le contenu (pages, tarifs, etc.) est éditable via <code>/admin</code> grâce à Sveltia CMS.<br>
+L’authentification se fait via GitHub OAuth.</p>
+<h2 id="d%C3%A9ploiement" tabindex="-1">Déploiement</h2>
+<p>Les workflows GitHub Actions automatisent :</p>
+<ul>
+<li>Le build Eleventy selon l’environnement (<code>ELEVENTY_ENV</code>)</li>
+<li>La copie de la bonne config CMS</li>
+<li>Le déploiement sur le repo cible (<code>staging</code> ou <code>production</code>)</li>
+</ul>
+<h2 id="contribution" tabindex="-1">Contribution</h2>
+<ol>
+<li>Forkez ce dépôt</li>
+<li>Travaillez sur une branche dédiée</li>
+<li>Proposez une Pull Request</li>
+</ol>
+<hr>
+<p><strong>Site réalisé par Vincent Guérin.</strong></p>
