@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Viguro79/pmequitherapie
-  branch: feat/workinprogress
+  branch: production
   base_url: https://sveltia-cms-auth.vincent-guerinrousteau.workers.dev
 media_folder: "images"
 public_folder: "/images"
